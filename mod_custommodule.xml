@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+    <name>mod_custommodule</name>
+    <author>Your Name</author>
+    <version>1.0.0</version>
+    <description>A custom module with a model example.</description>
+    <files>
+        <filename module="mod_custommodule">mod_custommodule.php</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <folder>models</folder>
+    </files>
+</extension>
