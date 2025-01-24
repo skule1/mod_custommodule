@@ -24,11 +24,11 @@ if (!empty($data)) {
             . '</td><td style="width:100px; text-align:right;">' .   number_format($item->total_price, 2, ',', '.');
         if ($item->nr == 1)
             echo '</td><td style="width:80px; text-align:right;"> ' . number_format($item->value, 2, ',', '.')
-                . '</td><td style="width:100px; text-align:right;"> ' . number_format($item->total, 2, ',', '.');
-        else
-            echo '</td><td></td><td>';
-        echo '</td><td style="width:60px; text-align:left; padding-left: 10px;">' .  substr($item->payment_method_title, 0, 15);
+                . '</td><td style="width:100px; text-align:right;"> ' . number_format($item->total, 2, ',', '.')
+                . '</td><td style="width:60px; text-align:left; padding-left: 10px;">' .  substr($item->payment_method_title, 0, 15);
 
+        else
+            echo '</td><td></td><td></td><td>';
         '</td></tr>';
     }
 } else {

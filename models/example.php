@@ -27,7 +27,9 @@ class CustomModuleModelExample extends BaseDatabaseModel
         $query = 'SELECT *,ROW_NUMBER() OVER (PARTITION BY a.order_id ORDER BY a.product_id) AS nr '
             . ' FROM #__eshop_orderproducts a INNER  JOIN #__eshop_orders b ON a.order_id=b.id '
             . 'inner join #__eshop_ordertotals c on a.order_id=c.order_id '
-            . ' WHERE b.customer_id=' . $brukerid . ' AND  c.name="shipping" ;';
+            . ' WHERE b.customer_id=' . $brukerid . ' AND  c.name="shipping"   ORDER BY b.id asc, nr desc;';
+
+
 
 
 
